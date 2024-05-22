@@ -39,9 +39,9 @@ function List({ item }) {
       <div className="mainListColor">
         <div className="mainListColorBox" style={{ backgroundColor: item.colorCode }}></div> {item.colorCode}
       </div>
-      <div style={{ fontSize: "20px", cursor: "pointer" }} onClick={handlePut}>
+      {/* <div style={{ fontSize: "20px", cursor: "pointer" }} onClick={handlePut}>
         수정
-      </div>
+      </div> */}
     </div>
   ) : (
     <form className="mainListItem" onSubmit={handleSubmit(onSubmit)}>
