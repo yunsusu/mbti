@@ -1,0 +1,22 @@
+.searchWrap {
+  margin-top: 5rem;
+  font-size: 2.4rem;
+  display: flex;
+  & > form {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    & input {
+      width: 6rem;
+      font-size: 2.5rem;
+      background-color: rgba(237, 237, 237, 0.3);
+    }
+  }
+}
+
+.searchBtn {
+  width: 4rem !important;
+  height: 2rem;
+  background-color: #fff !important;
+}

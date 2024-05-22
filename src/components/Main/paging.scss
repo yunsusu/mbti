@@ -1,0 +1,13 @@
+.pagingWrap {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  font-size: 10rem;
+  & div {
+    cursor: pointer;
+  }
+}
+
+.pagingArrow {
+}

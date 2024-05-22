@@ -1,0 +1,143 @@
+.addWrap {
+  width: 100%;
+  max-width: 52.8rem;
+  margin: 8rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.addTitleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addTitle {
+  font-size: 4rem;
+  font-weight: 800;
+}
+.addBack {
+  width: 4.8rem;
+  height: 4.8rem;
+  font-size: 2.4rem;
+  padding: 1.2rem;
+  border-radius: 24px;
+  background: #f5f7fb;
+  text-align: center;
+  cursor: pointer;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mbti-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.mbti-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.mbti-container label span {
+  display: flex;
+  width: 200px;
+  height: 76px;
+  padding: 14px 41px 14px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 2px solid #e7ebf2;
+  cursor: pointer;
+  color: #8892a6;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.mbti-container input[type="radio"] {
+  display: none;
+}
+
+.mbti-container input[type="radio"]:checked + span {
+  background-color: #333;
+  color: #fff;
+}
+
+.mbti-container span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+  gap: 10px;
+  width: 100%;
+  & > div {
+    display: flex;
+    gap: 10px;
+  }
+  & > div:last-child {
+    display: flex;
+    padding: 26px 25px 27px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border-radius: 16px;
+    border: 2px solid #e7ebf2;
+    & input:first-child {
+      width: 15rem;
+      color: #8892a6;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+}
+.reset {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.color-picker label {
+  color: #464e5e;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.color-picker input[type="color"] {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  display: flex;
+  width: 416px;
+  padding: 22px 0px 21px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #464e5e;
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}

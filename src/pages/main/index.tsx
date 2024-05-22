@@ -1,21 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
-import axios from "../../lib/axios";
+import { useQuery } from "@tanstack/react-query";
+import { getData } from "../../lib/main.ts";
+import Paging from "../../components/Main/paging.tsx";
+import { useNavigate } from "react-router-dom";
+import Search from "../../components/Main/Search.tsx";
+import Delete from "../../components/Main/Delete.tsx";
+import List from "../../components/Main/List.tsx";
 
 function Main() {
-  const key = process.env.REACT_APP_KEY;
-  const getData = async () => {
-    try {
-      const res = await axios.get(`/servers?apikey=${key}`);
-      // const res = await instanse.get(`bakal/characters?characterName=윤마도&apikey=${key}`);
-      console.log(res);
-    } catch {}
+  const [color, setColor] = useState([]);
+  const [next, setNext] = useState<string>("");
+  const navi = useNavigate();
+
+  const { data: lists, isSuccess } = useQuery({ queryKey: ["lists", next], queryFn: () => getData(next) });
+
+  const addColor = () => {
+    navi("/addColor");
   };
+
+  useEffect(() => {
+    if (isSuccess && lists?.results) {
+      setColor(lists.results);
+    }
+  }, [isSuccess, lists]);
 
   return (
     <>
-      <div className="btn" onClick={getData}>
-        get data
+      <div className="mainWrap">
+        <div>
+          <div className="mainTitle">
+            MBTI별
+            <br />
+            <span>좋아하는 컬러</span>
+          </div>
+          <Search setColor={setColor} />
+          <Delete />
+        </div>
+
+        <div className="mainList">
+          <div className="mainListMore" onClick={addColor}>
+            + 새 컬러 등록하기
+          </div>
+
+          {color?.map((item: any, index) => {
+            return (
+              <div key={index}>
+                <List item={item} />
+              </div>
+            );
+          })}
+          <Paging setNext={setNext} lists={lists} />
+        </div>
       </div>
     </>
   );

@@ -1,9 +1,10 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./index.module.scss";
+import "./index.scss";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import AddColor from "./pages/addColor/index.tsx";
 
 const Main = lazy(() => import("./pages/main/index.tsx"));
 
@@ -17,6 +18,9 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<Main />} />
+            </Route>
+            <Route path="/addColor">
+              <Route index element={<AddColor />} />
             </Route>
           </Routes>
         </Suspense>

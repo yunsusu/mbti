@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instanse = axios.create({
-  baseURL: "https://api.neople.co.kr/df/",
+  baseURL: "https://learn.codeit.kr",
 });
 
 export default instanse;

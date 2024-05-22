@@ -1,3 +1,80 @@
-.btn {
-  font-size: 3rem;
+.mainWrap {
+  width: 100%;
+  max-width: 120rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 0 auto;
+  padding-top: 8rem;
+}
+.mainTitle {
+  padding: 8rem 4rem;
+  max-height: 25.6rem;
+  background-color: pink;
+  text-align: right;
+  border-radius: 80px;
+  background: #f5f7fb;
+  color: #464e5e;
+  font-size: 4rem;
+  & span {
+    font-weight: bold;
+  }
+}
+
+.mainList {
+  width: 100%;
+  max-width: 52.8rem;
+  display: flex;
+  flex-direction: column;
+  color: #464e5e;
+}
+.mainListMore {
+  padding: 24px 48px;
+  border-radius: 8px;
+  border: 2px dashed #dee3ec;
+  font-family: Pretendard;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+.mainListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  gap: 8px;
+  & span {
+    font-size: 2.5rem;
+    color: #bfc8da;
+  }
+  &:hover {
+    background: #f5f7fb;
+  }
+}
+.mainListNum {
+  color: #bfc8da;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.mainListTag {
+  color: #464e5e;
+  font-size: 2.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background: rgba(178, 189, 204, 0.2);
+}
+
+.mainListColor {
+  width: 16rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #bfc8da;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.mainListColorBox {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 8px;
+  border: 3px solid #e8e8e8;
 }
